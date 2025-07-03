@@ -12,7 +12,6 @@ Este portafolio es una recopilación de mis proyectos, prácticas y experiencias
 - 🌐 Webs desarrolladas en HTML, CSS, JavaScript, PHP y frameworks modernos
 - 📁 Acceso a herramientas y entornos como WordPress, phpMyAdmin, etc.
 - 🧪 Prácticas de desarrollo backend y frontend
-- 🛠️ Experimentos y pruebas de UI/UX
 
 ---
 
