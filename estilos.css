@@ -1,0 +1,62 @@
+/* estilos index */
+
+/* estilo botones*/
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+.button-container .c-button {
+    text-align: center;
+}
+
+.simple-gooey-button {
+    position: relative;
+    padding: 0.9em 1.6em;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #06c8d9;
+    background: transparent;
+    border: 3px solid #06c8d9;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+.simple-gooey-button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #06c8d9;
+    border-radius: 40%;
+    transform: translateX(-50%) scaleY(1);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.simple-gooey-button:hover::before {
+    top: -30%;
+    transform: translateX(-50%) scaleY(1);
+}
+
+.simple-gooey-button:hover {
+    color: #fff;
+}
+
+.simple-gooey-button:focus {
+    outline: none;
+}
+
+.simple-gooey-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
