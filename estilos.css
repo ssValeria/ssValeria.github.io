@@ -1,62 +1,72 @@
 /* estilos index */
 
-/* estilo botones*/
+html {
+    background: url(fondo1.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-size: 30px;
+    text-align: center;
+    color: #d60e0e;
+
+}
+
+/* estilo botones index*/
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    padding-top: 1em;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
-.button-container .c-button {
-    text-align: center;
-}
-
-.simple-gooey-button {
-    position: relative;
-    padding: 0.9em 1.6em;
-    font-size: 16px;
+.button_index {
+    margin: 2%;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    color: #06c8d9;
-    background: transparent;
-    border: 3px solid #06c8d9;
     cursor: pointer;
+    color: #2c9caf;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
     overflow: hidden;
-    transition: color 0.4s ease;
+    outline: 2px solid #2c9caf;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
 }
 
-.simple-gooey-button::before {
+.button_index:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.button_index::before {
     content: "";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: #06c8d9;
-    border-radius: 40%;
-    transform: translateX(-50%) scaleY(1);
-    transition: all 0.5s ease;
-    z-index: 0;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c9caf;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
 }
 
-.simple-gooey-button:hover::before {
-    top: -30%;
-    transform: translateX(-50%) scaleY(1);
-}
-
-.simple-gooey-button:hover {
-    color: #fff;
-}
-
-.simple-gooey-button:focus {
-    outline: none;
-}
-
-.simple-gooey-button::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+.button_index:hover::before {
+    width: 250%;
 }
