@@ -1,57 +1,73 @@
-/* estilos index */
-
-html {
-    background: url(fondo1.png) no-repeat center center fixed;
-    background-size: cover;
+/* declaraciones colores */
+:root {
+    --color-primary: #08798d;
+    --color-primary-hover: #70bdca;
+    --color-bg-footer: #171717;
+    --color-text-footer: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background: transparent;
+/* Reset básico y body */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.header {
-    font-size: 30px;
-    text-align: center;
-    color: #d60e0e;
-
+html {
+    background: url(fondo.png) no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--font-family);
 }
 
-/* estilo botones index*/
+body {
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    font-size: clamp(24px, 3vw, 30px);
+    text-align: center;
+    color: #040c3a;
+    padding: 1rem;
+}
+
+/* Quick Access */
+.quick-access {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Botones */
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.3rem;
     justify-content: center;
-    padding-top: 1rem;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .button_index {
-    margin: 2%;
-    padding: 1em 2em;
+    position: relative;
+    display: inline-block;
+    margin: 0.5% auto;
+    padding: 1em 1em;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     letter-spacing: 5px;
     text-transform: uppercase;
     cursor: pointer;
-    color: #2c9caf;
-    transition: all 1000ms;
+    color: var(--color-primary);
     font-size: 15px;
-    position: relative;
-    overflow: hidden;
-    outline: 2px solid #2c9caf;
-    display: inline-block;
     text-align: center;
     text-decoration: none;
-}
-
-.button_index:hover {
-    color: #ffffff;
-    transform: scale(1.1);
-    outline: 2px solid #70bdca;
-    box-shadow: 4px 5px 17px -4px #268391;
+    outline: 2px solid var(--color-primary);
+    overflow: hidden;
+    transition: color 0.4s ease, transform 0.4s ease, outline 0.4s ease, box-shadow 0.4s ease;
 }
 
 .button_index::before {
@@ -61,12 +77,91 @@ body {
     top: 0;
     width: 0;
     height: 100%;
-    background-color: #2c9caf;
+    background-color: rgba(44, 156, 175, 0.8);
     transform: skewX(45deg);
     z-index: -1;
-    transition: width 1000ms;
+    transition: width 600ms ease;
+}
+
+.button_index:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid var(--color-primary-hover);
+    box-shadow: 4px 5px 17px -4px var(--color-primary);
 }
 
 .button_index:hover::before {
     width: 250%;
+}
+
+.button_index:focus {
+    outline: 3px dashed var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Main Section */
+main section {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+    color: #040c3a;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--color-bg-footer);
+    color: var(--color-text-footer);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: clamp(16px, 2vw, 22px);
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+footer a {
+    color: var(--color-text-footer);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding-bottom: 1rem;
+    }
+
+    .button_index {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1em 3em;
+        letter-spacing: 3px;
+    }
+
+    .header {
+        font-size: 24px;
+        padding: 1rem 0;
+    }
+
+    main section {
+        font-size: 16px;
+    }
 }

@@ -7,18 +7,20 @@
         <link rel="stylesheet" href="estilos.css" />
     </head>
     <body>
-        <header class="header">
-            <h1>Bienvenida a mi portafolio</h1>
+        <header class="header" role="banner">
+            <h1>Bienvenidos a mi portafolio web</h1>
         </header>
 
-        <section class="quick-access">
-            <h2>Accesos rápidos</h2>
-            <div class="button-container">
-                <a href="sobre.html" class="button_index"> Sobre mí </a>
-                <a href="proyectos.html" class="button_index"> Proyectos </a>
-                <a href="contacto.html" class="button_index"> Contacto </a>
-            </div>
-        </section>
+        <nav aria-label="Accesos rápidos">
+            <section class="quick-access">
+                <h2>Accesos rápidos</h2>
+                <div class="button-container">
+                    <a href="sobre.html" class="button_index">Sobre mí</a>
+                    <a href="proyectos.html" class="button_index">Proyectos</a>
+                    <a href="contacto.html" class="button_index">Contacto</a>
+                </div>
+            </section>
+        </nav>
 
         <main>
             <section>
@@ -28,8 +30,12 @@
             </section>
         </main>
 
-        <footer>
+        <footer role="contentinfo">
             <p>© 2025 Valeria</p>
+            <p>Desarrolladora web en formación</p>
+            <p>Contacto: <a
+                    href="mailto:santanavaleria394@gmail.com">santanavaleria394@gmail.com</a></p>
         </footer>
+
     </body>
 </html>
