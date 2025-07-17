@@ -456,6 +456,112 @@ body {
     font-weight: 600;
 }
 
+/**********************************************/
+/*               PROYECTOS PAGE              */
+/**********************************************/
+
+/* ——— Contenedor principal de la página de proyectos ——— */
+body.proyectos main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    /* separación vertical entre cards */
+    padding: 2rem 1rem;
+}
+
+/* ——— Tarjeta de proyecto ——— */
+.card {
+    width: 100%;
+    max-width: 720px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    color: #040c3a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título opcional dentro de cada card */
+.card h2 {
+    font-size: clamp(22px, 4vw, 28px);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Descripción opcional */
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+/* ——— Contenedor de botones dentro de cada card ——— */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+/* Botón GitHub */
+.Btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: #24292e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.Btn:hover {
+    background: #8bbdf7;
+    transform: translateY(-2px);
+}
+
+.Btn .svgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Btn svg {
+    width: 1.4em;
+    height: 1.4em;
+}
+
+/* Fondo animado opcional */
+.Btn .BG {
+    position: absolute;
+    inset: 0;
+    background: #8bbdf7;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.Btn:hover .BG {
+    opacity: 1;
+}
+
 
 
 /**********************************************/
