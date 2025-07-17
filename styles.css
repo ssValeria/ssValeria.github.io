@@ -13,11 +13,12 @@
 /**********************************************/
 /*             RESETEO Y BODY GLOBAL          */
 /**********************************************/
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
+
 
 html {
     background: url(fondo.png) no-repeat center center fixed;
@@ -683,7 +684,9 @@ footer a:focus {
         background: #ffffffdd;
         backdrop-filter: none;
         padding: 1.5rem 1rem;
+        width: 100%;
         max-width: 95%;
         margin: 0 auto 1rem auto;
+        box-sizing: border-box;
     }
 }
