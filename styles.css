@@ -449,12 +449,14 @@ body {
     background: transparent;
     font-size: 14px;
     color: #003049;
-    width: 205px;
+    width: 100%;
+    max-width: 205%;
     min-width: 100px;
     cursor: text;
     user-select: all;
     outline: none;
     font-weight: 600;
+    box-sizing: border-box;
 }
 
 /**********************************************/
@@ -688,5 +690,18 @@ footer a:focus {
         max-width: 95%;
         margin: 0 auto 1rem auto;
         box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    .copy-button {
+        width: 90%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    .copy-input {
+        max-width: 100%;
+        font-size: 13px;
     }
 }
