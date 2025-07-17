@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400&display=swap');
+
+/* Estilos generales */
+body {
+  background-image: url(imgs/fondoestrellado.jpg);
+    background-size: auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* ENCABEZADO */
+header {
+  background-color: #000000;
+  position: sticky;
+  width: auto;
+  top: 0;
+  border-bottom: 1px solid #ffffff; 
+  border-radius: 2%;
+  z-index: 3;
+}
+
+/* FONT TITULO INICIAL */
+.titulo-inicial {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 10;
+  font-size: 7em;
+  text-align: center;
+  padding-bottom: 0;
+  color: #fff;
+  padding-top: 9px;
+  padding: 2%;
+}
+
+.play-regular {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.play-bold {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* SECCIÓN INICIAL */
+.section-inicial {
+  position: relative;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1px;
+  z-index: -1;
+  padding-top: 0;
+  font-family: "Play", sans-serif;
+  font-size: 2em;
+  font-style: normal;
+}
+
+
+/* AJUSTES BARRA DE NAVEGACIÓN */
+.navbar {
+  background-color: #000000;
+  background-size: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+}
+
+.navbar-brand img {
+  max-height: 50px;
+  width: auto;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center; 
+}
+
+.navbar-nav .nav-item {
+  display: inline-block; /* Alinea el menú */
+  margin-right: 10px;
+}
+
+.opcionesMENU {
+  letter-spacing: 0;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.opcionesMENU:hover,
+.opcionesMENU:active {
+  letter-spacing: 2px;
+}
+
+.opcionesMENU:after,
+.opcionesMENU:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: none;
+  bottom: 2px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 280ms ease-in-out;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.opcionesMENU:hover:after,
+.opcionesMENU:hover:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-color: #fff;
+  -webkit-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.opcionesMENU:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+/* BOTÓN GITHUB */
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+  z-index: 1;
+  left: -7px;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(233, 233, 233, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(235, 232, 232, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+main {
+  padding-top: 10px;
+  padding: 2%;
+}
+
+
+
+/* aliniación de botones */
+.alinear-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding-bottom: 5%;
+  padding-top: 3%;
+}
+
+
+/* tarjeta */
+section{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.card{
+  display: grid;
+  justify-items: center;
+  margin-top: 10px;
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px #1900ff;
+}
+
+.card img{
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px rgb(12, 0, 117);
+  width: 60%;
+  border-radius: 50%;
+  object-fit: scale-down;
+}
+
+.card p{
+  text-align: center;
+}
+
+.card p:nth-child(3){
+  color: grey;
+  margin-top: -40px;
+  font-size: 15px;
+}
+
+.card p:nth-child(2){
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 25px;
+  color: #2a292b;
+}
+
+
+/* PIE DE PAG */
+footer {
+  background-color: #000000;
+  color: #ffffff; 
+  padding: 20px;
+  text-align: center;
+}

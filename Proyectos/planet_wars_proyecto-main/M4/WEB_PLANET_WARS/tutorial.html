@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Wars</title>
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/log2_pagina.png" type="image/x-icon">
+    <script>
+        function mostrarSeccion(seccionId) {
+            // Ocultar todas las secciones
+            var secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(function(seccion) {
+                seccion.style.display = 'none';
+            });
+    
+            // Mostrar la sección correspondiente al botón clicado
+            var seccionMostrar = document.getElementById('seccion-' + seccionId);
+            seccionMostrar.style.display = 'block';
+        }
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">             
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- LOGO -->
+                <a class="navbar-brand" href="incio.html"> 
+                    <img src="imgs/log2_pagina.png" alt="Planet Wars">
+                </a>
+                <!-- OPCIONES NAV -->
+                <ul class="navbar-nav"> 
+                    <li class="nav-item">
+                        <a class="opcionesMENU" aria-current="page" href="incio.html"> Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="opcionesMENU" href="tutorial.html"> Tutorial </a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="opcionesMENU" href="merchandising.html"> Merchandising </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="opcionesMENU" href="aboutUs.html"> About Us </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- BOTÓN GITHUB -->
+            <a href="https://github.com/Gerysnz/planet_wars_proyecto" target="_blank" class="Btn">
+                <span class="svgContainer">
+                    <svg fill="white" viewBox="0 0 496 512" height="1.6em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                </span>
+                <span class="BG"></span>
+            </a>            
+        </nav>
+    </header>
+
+    <main>
+<!-- TITULO INICIAL -->
+        <div class="titulo-inicial">
+            <h2> TUTORIAL </h2>
+        </div>
+
+        <!-- BLOQUES INFO (1) -->
+        <section class="section-inicial">
+            <div class="text">
+                <p>
+                    Aprende sobre la estrategia espacial donde gestionas tu propio planeta,
+                    construyes flotas y defensas, y luchas contra otros jugadores en el vasto universo.
+                </p>
+            </div>
+        </section>
+
+        <!-- BOTONES DIVISORES DE SECCIONES -->
+        <div class="alinear-botones">
+            <button class="btn" type="button" onclick="mostrarSeccion('opciones')">
+                <strong> GAME OPTIONS </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+
+                
+            <button class="btn" type="button" onclick="mostrarSeccion('secciones')">
+                <strong> LEARN TO PLAY </strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+        </div>
+
+        <!-- FUNCIONES -->
+        <section id="seccion-opciones" class="seccion" style="display: none;">
+            <div class="container-izquierda"> <!-- Mejora y Defensa del Planeta -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Improvement and Defense of the Planet</h1><br>
+                        <ul>
+                            <li> 
+                                With each improvement in your defense technology, your defensive structures become
+                                more robust and resistant. Strengthen your missile launchers, ion and plasma cannons, and make sure
+                                that any invader will pay a high price for trying to penetrate your defenses. 
+                            </li> <br>
+
+                            <li> 
+                                Become an unstoppable force in the universe! By improving your attack technology,
+                                Every ship in your fleet becomes a more efficient destruction machine. Improve your hunts
+                                light, heavy, battleships and battleships to deal more damage in each confrontation.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="img_juego/upgrade2.png" alt="Descripción de la imagen 1">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container-izquierda"> <!-- Construcción Cazas -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Fighter Construction</h1>
+                        <ul>
+                            <li>  
+                                Fast, agile and lethal. Light fighters are the vanguard of your navy,
+                                perfect for quick attacks and reconnaissance missions. Produce these fighters
+                                It is crucial to maintain an active defense and surprise offenses.
+                            </li> <br>
+
+                            <li>  
+                                With greater destructive capacity and endurance, heavy fighters are ideal for
+                                longer and tougher confrontations. His brute force can change the course of a battle.
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="img_juego/buildTroops.png" alt="Descripción de la imagen 1">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container-izquierda"> <!-- Construcción Naves -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Ship Construction</h1>
+                        <ul>
+                            <li>  
+                                Deploy robust battleships that can withstand heavy damage and strike hard.
+                                Battleships are the giants of space, capable of absorbing significant damage and
+                                strike back with devastating force. They are the core of any self-respecting fleet.
+                            </li><br>
+
+                            <li>  
+                                Manufacture armored ships with high defense and destructive capacity.
+                                Maximum protection and great offensive power. Armored ships are perfect for players who value
+                                defense and offense in equal measure. They are difficult to destroy and dangerous in any confrontation.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="img_juego/change_attacker.png" alt="Descripción de la imagen 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-izquierda"> <!-- Defensa Avanzada -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Advanced Defense</h1>
+                        <ul>
+                            <li>
+                                Missile launchers are your first line of defense, providing an initial barrier against any
+                                invasion. They are quick to build and effective in large numbers.
+                            </li><br>
+
+                            <li>  
+                                Ion cannons offer precise and powerful defense, capable of neutralizing threats before they can
+                                that reach your critical infrastructures. They are the next step in the evolution of your defenses.
+                            </li><br>
+
+                            <li>
+                                The maximum expression of planetary defense. Plasma cannons are destructive and can disintegrate
+                                enemy ships with a single shot. Its mere presence deters potential attackers.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="img_juego/buildDenfenses.png" alt="Descripción de la imagen 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-izquierda"> <!-- Gestión del Planeta -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo"> Planet Management </h1>
+                        <ul>
+                            <li>
+                                The key to a prosperous empire is efficient resource management.
+                                Produce and store metal and deuterium, and use it wisely to build and upgrade your fleet
+                                and defenses.
+                            </li><br>
+                            <li>  
+                                Keep an eye on all your planet's key stats, from resource production
+                                to the state of your defense and fleet. Information is power, and this
+                                feature allows you to always be one step ahead.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="img_juego/tecnologio_inicio.png" alt="Descripción de la imagen 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-izquierda"> <!-- Simulación de Batallas -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Battle Simulation</h1>
+                        <ul>
+                            <li>
+                                Show your might in epic space battles! Send your fleet against other planets
+                                and compete for galactic domination. Every battle is an opportunity to show your strategy
+                                and command skills.
+                            </li><br>
+
+                            <li>  
+                                After each battle, review the results in detail. Learn from your victories and
+                                defeats to improve your tactics and better prepare for future confrontations.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="img_juego/battle4.png" alt="Descripción de la imagen 1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- APRENDE A JUGAR -->
+        <section id="seccion-secciones" class="seccion" style="display: none;">
+            <div class="button-container"> <!-- BOTÓN PLAY -->
+                <a href="holamundo.jar" download="nombre_del_archivo.jar" class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36px" height="36px">
+                        <rect width="36" height="36" x="0" y="0" fill="#fdd835"></rect>
+                        <path fill="#e53935" d="M38.67,42H11.52C11.27,40.62,11,38.57,11,36c0-5,0-11,0-11s1.44-7.39,3.22-9.59 c1.67-2.06,2.76-3.48,6.78-4.41c3-0.7,7.13-0.23,9,1c2.15,1.42,3.37,6.67,3.81,11.29c1.49-0.3,5.21,0.2,5.5,1.28 C40.89,30.29,39.48,38.31,38.67,42z"></path>
+                        <path fill="#b71c1c" d="M39.02,42H11.99c-0.22-2.67-0.48-7.05-0.49-12.72c0.83,4.18,1.63,9.59,6.98,9.79 c3.48,0.12,8.27,0.55,9.83-2.45c1.57-3,3.72-8.95,3.51-15.62c-0.19-5.84-1.75-8.2-2.13-8.7c0.59,0.66,3.74,4.49,4.01,11.7 c0.03,0.83,0.06,1.72,0.08,2.66c4.21-0.15,5.93,1.5,6.07,2.35C40.68,33.85,39.8,38.9,39.02,42z"></path>
+                        <path fill="#212121" d="M35,27.17c0,3.67-0.28,11.2-0.42,14.83h-2C32.72,38.42,33,30.83,33,27.17 c0-5.54-1.46-12.65-3.55-14.02c-1.65-1.08-5.49-1.48-8.23-0.85c-3.62,0.83-4.57,1.99-6.14,3.92L15,16.32 c-1.31,1.6-2.59,6.92-3,8.96v10.8c0,2.58,0.28,4.61,0.54,5.92H10.5c-0.25-1.41-0.5-3.42-0.5-5.92l0.02-11.09 c0.15-0.77,1.55-7.63,3.43-9.94l0.08-0.09c1.65-2.03,2.96-3.63,7.25-4.61c3.28-0.76,7.67-0.25,9.77,1.13 C33.79,13.6,35,22.23,35,27.17z"></path>
+                        <path fill="#01579b" d="M17.165,17.283c5.217-0.055,9.391,0.283,9,6.011c-0.391,5.728-8.478,5.533-9.391,5.337 c-0.913-0.196-7.826-0.043-7.696-5.337C9.209,18,13.645,17.32,17.165,17.283z"></path>
+                        <path fill="#212121" d="M40.739,37.38c-0.28,1.99-0.69,3.53-1.22,4.62h-2.43c0.25-0.19,1.13-1.11,1.67-4.9 c0.57-4-0.23-11.79-0.93-12.78c-0.4-0.4-2.63-0.8-4.37-0.89l0.1-1.99c1.04,0.05,4.53,0.31,5.71,1.49 C40.689,24.36,41.289,33.53,40.739,37.38z"></path>
+                        <path fill="#81d4fa" d="M10.154,20.201c0.261,2.059-0.196,3.351,2.543,3.546s8.076,1.022,9.402-0.554 c1.326-1.576,1.75-4.365-0.891-5.267C19.336,17.287,12.959,16.251,10.154,20.201z"></path>
+                        <path fill="#212121" d="M17.615,29.677c-0.502,0-0.873-0.03-1.052-0.069c-0.086-0.019-0.236-0.035-0.434-0.06 c-5.344-0.679-8.053-2.784-8.052-6.255c0.001-2.698,1.17-7.238,8.986-7.32l0.181-0.002c3.444-0.038,6.414-0.068,8.272,1.818 c1.173,1.191,1.712,3,1.647,5.53c-0.044,1.688-0.785,3.147-2.144,4.217C22.785,29.296,19.388,29.677,17.615,29.677z M17.086,17.973 c-7.006,0.074-7.008,4.023-7.008,5.321c-0.001,3.109,3.598,3.926,6.305,4.27c0.273,0.035,0.48,0.063,0.601,0.089 c0.563,0.101,4.68,0.035,6.855-1.732c0.865-0.702,1.299-1.57,1.326-2.653c0.051-1.958-0.301-3.291-1.073-4.075 c-1.262-1.281-3.834-1.255-6.825-1.222L17.086,17.973z"></path>
+                        <path fill="#e1f5fe" d="M15.078,19.043c1.957-0.326,5.122-0.529,4.435,1.304c-0.489,1.304-7.185,2.185-7.185,0.652 C12.328,19.467,15.078,19.043,15.078,19.043z"></path>
+                    </svg>
+                    <span class="now">now!</span>
+                    <span class="play">play</span>
+                </a>
+            </div>
+            
+            <div class="container-izquierda"> <!-- PLAY -->
+                <div class="content">
+                    <div class="text">
+                        <ul>
+                            <li>
+                                To start the game we will click on the play button and the download of
+                                the file containing the game will also start. Once downloaded you will only
+                                have to start it. It is recommended to have an application that supports java
+                                files so you can start them.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-izquierda"> <!-- Inicio del juego -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Start of the game</h1>
+                        <ul>
+                            <li> 
+                                When we start the game, the menu that we can see will appear,
+                                it is the initial menu that we have already been able to see in
+                                the options section. 
+                            </li> <br>
+
+                            <li> 
+                                The lines that appear above, as you can see, are the loads that are
+                                added when we start.
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                aded 1 Armored Ship<br>
+                                aded 1 Battle Ship<br>
+                                aded 1 Heavy Hunter<br>
+                                aded 3 Ligth Hunter<br>
+                                aded 1 Missile Launcher<br>
+                                aded 1 Ion Cannon<br>
+                                aded 1 Plasma Cannon<br>
+                                1)View Planet Stats<br>
+                                2)Build<br>
+                                3)Upgrade Technology<br>
+                                4)View Battle Reports<br>
+                                0)Exit<br>
+                                
+                                <br>Option >
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-izquierda"> <!-- Planet Stats -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Planet Stats</h1>
+                        <ul>
+                            <li> 
+                                In Planet Stats we can observe what we currently have on our planet.
+                            </li> <br>
+
+                            <li> 
+                                Everything can improve as you play and improve technology and acquire 
+                                defenses or troops.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card2">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                Planet Stats:<br>
+
+                                <br>TECHNOLOGY<br>
+                                
+                                <br>Atack Technology        2<br>
+                                Defense Technology      1<br>
+                                
+                                <br>DEFENSES<br>
+                                
+                                <br>Missile Launcher        0<br>
+                                Ion Cannon              0<br>
+                                Plasma Cannon           0<br>
+                                
+                                <br>FLEET<br>
+                                
+                                <br>Ligth Hunter            0<br>
+                                Heavy Hunter            0<br>
+                                Battle Ship             0<br>
+                                Armored Ship            0<br>
+                                
+                                <br>RESOURCES<br>
+                                
+                                <br>Metal               567000<br>
+                                    Deuterium           163115<br>
+                                
+                                <br>Option >
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-izquierda"> <!-- Add troops -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Add troops</h1>
+                        <ul>
+                            <li> 
+                                Following this example a little is what we would get to add some troops,
+                                we see how from the 'Main Menu' we go to 'Build' and there we choose the
+                                option to add troops and we choose the one we want, we add the number of
+                                how many we want and it will jump the message that they are already added.
+ 
+                            </li> <br>
+
+                            <li> 
+                                In the Defense part it is the same dynamic, only with other weapons.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card3">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                1)View Planet Stats<br>
+                                2)Build<br>
+                                3)Upgrade Technology<br>
+                                4)View Battle Reports<br>
+                                0)Exit<br>
+                                
+                                <br>Option ><br>
+                                2<br>
+                                <br>Build<br>
+                                1)Build troops<br>
+                                2)Build Defenses<br>
+                                3)Go Back<br>
+                                
+                                <br>Option ><br>
+                                1<br>
+                                
+                                <br>Menu Build troops<br>
+                                
+                                1)Build Ligth Hunter<br>
+                                2)Build HeavyHunter<br>
+                                3)Build Battle Ship<br>
+                                4)Build ArmoredShip<br>
+                                5)Go Back<br>
+                                
+                                <br>Option ><br>
+                                2<br>
+                                Amount of Units<br>
+                                Amount: ><br>
+                                3<br>
+                                aded 3 Heavy Hunter<br>
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-izquierda"> <!-- Upgrade -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Upgrade</h1>
+                        <ul>
+                            <li> 
+                                Once we have added the weapons we can upgrade and improve our resources.
+                            </li> <br>
+                        </ul>
+                    </div>
+                    <div class="card4">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                Upgrade Technology<br>
+                                <br>Actual Defense Technology:             1<br>
+                                Actual Attack Technology:              2<br>
+                                
+                                <br>1)Upgrade Defense Technology. Cost: 3200  Deuterium<br>
+                                2)Upgrade Attack Technology.  Cost: 5120  Deuterium<br>
+                                3)Go back<br>
+                                
+                                <br>Deuterium resources = 140465<br>
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-izquierda"> <!-- battle -->
+                <div class="content">
+                    <div class="text">
+                        <h1 class="titulo">Battle</h1>
+                        <ul>
+                            <li> 
+                                Once we start the battle, it looks something like this in which we see at the root what changes are being made.
+
+                            </li> <br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-izquierda"> 
+                <div class="content">
+                    <div class="card5">
+                        <div class="top">
+                            <div class="dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                            <p class="g-color">_&gt;</p>
+                        </div>
+                        <div class="bottom">
+                            <p class="code">
+                                BATTLE NUMBER: 2<br>
+                                START THE BATTLE<br>
+                                Attacks fleet enemy: Armored Ship attacks Heavy Hunter<br>
+                                Armored Ship generates the damage = 700<br>
+                                Heavy Hunter stays with armor = 300<br>
+                                Attacks fleet enemy: Armored Ship attacks Ligth Hunter<br>
+                                Armored Ship generates the damage = 700<br>
+                                Ligth Hunter stays with armor = -300<br>
+                                we eliminate Ligth Hunter<br>
+                                Attacks fleet enemy: Armored Ship attacks Ion Cannon<br>
+                                Armored Ship generates the damage = 700<br>
+                                Ion Cannon stays with armor = 500<br>
+                                Attacks fleet enemy: Armored Ship attacks Ion Cannon<br>
+                                Armored Ship generates the damage = 700<br>
+                                Ion Cannon stays with armor = 500<br>
+
+                                <br>********************CHANGE ATTACKER********************<br>
+                                Attacks Planet: Armored Ship attacks Heavy Hunter
+                                Armored Ship generates the damage = 700<br>
+                                Heavy Hunter stays with armor = 300<br>
+                                Attacks Planet: Armored Ship attacks Armored Ship<br>
+                                Armored Ship generates the damage = 700<br>
+                                Armored Ship stays with armor = 7300<br>
+
+                                <br>********************CHANGE ATTACKER********************<br>
+                                Attacks fleet enemy: Heavy Hunter attacks Ligth Hunter<br>
+                                Heavy Hunter generates the damage = 150<br>
+                                Ligth Hunter stays with armor = 250<br>
+
+                                <br>********************CHANGE ATTACKER********************<br>
+                                Attacks Planet: Armored Ship attacks Armored Ship<br>
+                                Armored Ship generates the damage = 700<br>
+                                Armored Ship stays with armor = 6600<br>
+                                Attacks Planet: Armored Ship attacks Battle Ship<br>
+                                Armored Ship generates the damage = 700<br>
+                                Battle Ship stays with armor = 5300<br>
+                                Attacks Planet: Armored Ship attacks Ligth Hunter<br>
+                                Armored Ship generates the damage = 700<br>
+                                Ligth Hunter stays with armor = -300<br>
+                                we eliminate Ligth Hunter<br>
+                                Attacks Planet: Armored Ship attacks Ligth Hunter<br>
+                                Armored Ship generates the damage = 700<br>
+                                Ligth Hunter stays with armor = -300<br>
+                                we eliminate Ligth Hunter<br>
+                                Attacks Planet: Armored Ship attacks Ligth Hunter<br>
+                                Armored Ship generates the damage = 700<br>
+                                Ligth Hunter stays with armor = -300<br>
+                                we eliminate Ligth Hunter<br>
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer> @COPYRIGHT </footer>
+</body>
+</html>
+
+
