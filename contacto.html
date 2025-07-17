@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Contacto | Valeria Santana</title>
-        <link rel="stylesheet" href="estilos.css" />
+        <link rel="stylesheet" href="styles.css" />
     </head>
 
     <body class="contacto">
@@ -15,10 +15,25 @@
                 <p>Si te gustaría ponerte en contacto conmigo para colaborar,
                     ofrecerme una oportunidad o simplemente conversar sobre
                     desarrollo web, estaré encantada de leerte.</p>
-                <p>✉️ Puedes escribirme a: <a
-                        href="mailto:santanavaleria394@gmail.com">santanavaleria394@gmail.com</a></p>
+                <p>Puedes escribirme a:</p>
+
+                <label class="copy-button" tabindex="0">
+                    <svg role="img" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="copy-icon">
+                        <title>Gmail</title>
+                        <path
+                            d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                    </svg>
+
+                    <input type="text" value="santanavaleria394@gmail.com"
+                        readonly
+                        onfocus="this.select()" class="copy-input"
+                        aria-label="Correo para copiar" />
+                </label>
+
                 <div class="button-container">
-                    <a href="index.html" class="button_index">Volver al
+                    <a href="index.html" class="button-blue">Volver al
                         inicio</a>
                 </div>
             </div>

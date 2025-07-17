@@ -178,6 +178,25 @@ body {
     line-height: 1.6;
 }
 
+.card-habilidades {
+    background-color: #ffffffcc;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    color: #040c3a;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.card-habilidades h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
 /* === Foto de perfil circular === */
 .foto-perfil {
     width: 130px;
@@ -239,74 +258,204 @@ body {
     margin-top: 25px;
 }
 
-.card-perfil button {
-    padding: 8px 25px;
+/* ESTILO BOTÓN */
+.button-blue {
+    position: relative;
     display: block;
-    margin: auto;
-    border-radius: 8px;
+    padding: 14px 25px;
+    margin: 20px auto;
     border: none;
-    margin-top: 30px;
+    border-radius: 8px;
     background: #6b64f3;
     color: white;
     font-weight: 600;
-    cursor: pointer;
-}
-
-.card-perfil button:hover {
-    background: #534bf3;
-}
-
-
-/* === Tarjeta de habilidades === */
-.card-skills {
-    width: 500px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.card-skills .header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
     text-align: center;
-    font-size: 18px;
-}
-
-.card-skills .body {
-    padding: 20px;
-}
-
-.card-skills .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.card-skills .skill-name {
-    width: 120px;
-    font-size: 16px;
-}
-
-.card-skills .skill-level {
-    width: 160px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.4s ease, transform 0.4s ease, outline 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
-    margin-left: 20px;
 }
 
-.card-skills .skill-percent {
-    background-color: #333;
+.button-blue {
+    background: #6b64f3;
+    color: white;
+}
+
+.button-blue::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
     height: 100%;
+    background-color: #d0ebff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 600ms ease;
 }
 
-.card-skills .skill-percent-number {
-    margin-left: 20px;
-    font-size: 16px;
+.button-blue:hover {
+    color: #003049;
+    transform: scale(1.05);
+    outline: 2px solid var(--color-primary-hover);
+    box-shadow: 4px 5px 17px -4px var(--color-primary);
 }
+
+.button-blue:hover::before {
+    width: 250%;
+}
+
+.button-blue:focus-visible {
+    outline: 2px solid var(--color-primary-hover);
+    outline-offset: 4px;
+}
+
+
+
+/* === Estilos para la sección de habilidades === */
+.card-habilidades {
+    background-color: #ffffffcc;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #040c3a;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-habilidades h2 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
+.iconos-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Contenedor para cada habilidad */
+.habilidad-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.icono-habilidad {
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+
+}
+
+/* Texto del nombre de la tecnología */
+.nombre-tecnologia {
+    font-size: 14px;
+    font-weight: 500;
+    color: #040c3a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Efecto hover */
+.icono-habilidad:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Colores específicos para cada tecnología */
+.icono-habilidad[title="Python"],
+.icono-habilidad[data-tecnologia="Python"] {
+    fill: #3776AB;
+}
+
+.icono-habilidad[title="WordPress"],
+.icono-habilidad[data-tecnologia="WordPress"] {
+    fill: #21759B;
+}
+
+.icono-habilidad[title="Ubuntu"],
+.icono-habilidad[data-tecnologia="ubuntu"] {
+    fill: #E95420;
+}
+
+.icono-habilidad[title="HTML5"],
+.icono-habilidad[data-tecnologia="HTML"] {
+    fill: #E34F26;
+}
+
+.icono-habilidad[title="CSS3"],
+.icono-habilidad[data-tecnologia="CSS"] {
+    fill: #1572B6;
+}
+
+.icono-habilidad[title="Oracle"],
+.icono-habilidad[data-tecnologia="Oracle"] {
+    fill: #F80000;
+}
+
+.icono-habilidad[title="MongoDB"],
+.icono-habilidad[data-tecnologia="MongoDB"] {
+    fill: #47A248;
+}
+
+.icono-habilidad[title="Java"],
+.icono-habilidad[data-tecnologia="Java"] {
+    fill: #007396;
+}
+
+/**********************************************/
+/*          CONTACTO PAGE                    */
+/**********************************************/
+
+.copy-button {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #a5d8ff;
+    border-radius: 8px;
+    cursor: text;
+    font-weight: 600;
+    user-select: all;
+    width: auto;
+}
+
+.copy-button:focus-within {
+    outline: 2px solid #74c0fc;
+}
+
+.copy-icon {
+    width: 20px;
+    height: 20px;
+    fill: #003049;
+    pointer-events: none;
+}
+
+.copy-input {
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #003049;
+    width: 205px;
+    min-width: 100px;
+    cursor: text;
+    user-select: all;
+    outline: none;
+    font-weight: 600;
+}
+
 
 
 /**********************************************/
