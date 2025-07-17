@@ -601,68 +601,179 @@ footer a:focus {
     text-decoration: underline;
 }
 
-
 /**********************************************/
 /*               RESPONSIVE DESIGN            */
 /**********************************************/
 
-/* Tablets y pantallas medianas */
-@media (max-width: 768px) {
-    .card-presentacion {
-        padding: 1.5rem;
-        font-size: 16px;
+/* ========== General Responsive Rules ========== */
+@media (max-width: 1200px) {
+
+    /* Adjustments for large tablets and small laptops */
+    .portada main section {
+        max-width: 90%;
     }
 
-    /* Cambio a .card-habilidades que sí existe */
+    .card-presentacion,
     .card-habilidades {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .card-presentacion {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    /* Ajuste botones en contenedor */
-    .button-container {
-        gap: 0.5rem;
+        max-width: 85%;
     }
 }
 
-/* Móviles pequeños */
-@media (max-width: 600px) {
+/* ========== Tablets and Medium Screens (768px - 1024px) ========== */
+@media (max-width: 1024px) {
+
+    /* General content adjustments */
+    .portada main section,
+    .card-presentacion,
+    .card-habilidades {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    /* Button container adjustments */
+    .button-container {
+        gap: 0.8rem;
+        padding: 0 0.8rem 0.8rem;
+    }
+
+    /* Project cards adjustments */
+    .card {
+        padding: 1.8rem 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Card adjustments */
+    .card-presentacion,
+    .card-habilidades {
+        padding: 1.5rem;
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    /* Skills icons adjustments */
+    .iconos-habilidades {
+        gap: 20px;
+    }
+
+    .habilidad-item {
+        width: 80px;
+    }
+
+    .icono-habilidad {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Profile card adjustments */
+    .card-perfil {
+        width: 160px;
+        height: 220px;
+    }
+
+    .card-perfil .img {
+        width: 60px;
+        height: 70px;
+    }
+}
+
+/* ========== Small Tablets and Large Phones (600px - 768px) ========== */
+@media (max-width: 700px) {
+
+    /* Header adjustments */
+    .header {
+        font-size: clamp(20px, 4vw, 24px);
+    }
+
+    /* Button container becomes vertical */
     .button-container {
         flex-direction: column;
+        align-items: center;
         gap: 0.7rem;
         padding-bottom: 1rem;
     }
 
+    /* Index buttons adjustments */
     .button_index {
-        width: 80%;
+        width: 90%;
+        max-width: 300px;
         margin: 0 auto;
         padding: 1em 3em;
         letter-spacing: 3px;
+        font-size: 14px;
     }
 
-    .portada .header {
-        font-size: 24px;
-        padding: 1rem 0;
+    /* Project cards adjustments */
+    .card {
+        padding: 1.5rem 1rem;
+        max-width: 95%;
     }
 
-    .portada main section {
-        font-size: 16px;
+    /* Contact form adjustments */
+    .copy-button {
+        width: 90%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    .copy-input {
+        max-width: 110%;
+        font-size: 13px;
     }
 }
 
-/* Móviles muy pequeños*/
-@media (max-width: 400px) {
-    .button_index {
-        padding: 0.8em 2em;
-        font-size: 14px;
-        letter-spacing: 2px;
+/* ========== Mobile Phones (480px - 600px) ========== */
+@media (max-width: 600px) {
+
+    /* General content adjustments */
+    .portada .header {
+        font-size: 22px;
+        padding: 0.8rem 0;
     }
 
+    .portada main section {
+        font-size: 15px;
+    }
+
+    /* Profile section adjustments */
+    .sobre-mi-container {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    /* Skills section adjustments */
+    .iconos-habilidades {
+        gap: 15px;
+    }
+
+    .habilidad-item {
+        width: 70px;
+    }
+
+    .icono-habilidad {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .nombre-tecnologia {
+        font-size: 12px;
+    }
+
+    /* Remove blur effects for performance */
+    .card,
+    .card-presentacion,
+    .card-habilidades {
+        background: #ffffffdd;
+        backdrop-filter: none;
+    }
+}
+
+/* ========== Small Phones (under 480px) ========== */
+@media (max-width: 480px) {
+
+    /* Header and text adjustments */
     .portada .header {
         font-size: 20px;
         padding: 0.5rem 0;
@@ -671,37 +782,71 @@ footer a:focus {
     .portada main section {
         font-size: 14px;
     }
+
+    /* Button adjustments */
+    .button_index {
+        padding: 0.8em 2em;
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    /* Profile card adjustments */
+    .card-perfil {
+        width: 140px;
+        height: 200px;
+    }
+
+    .card-perfil span {
+        font-size: 14px;
+    }
+
+    .card-perfil .job {
+        font-size: 10px;
+    }
+
+    .card-perfil .img {
+        width: 50px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 12px;
+        font-size: 14px;
+    }
 }
 
-@media (max-width: 600px) {
-    .card {
-        background: #ffffffdd;
-        backdrop-filter: none;
-        padding: 1.5rem 1rem;
-        max-width: 95%;
-        margin: 0 auto 1rem auto;
+/* ========== Very Small Phones (under 360px) ========== */
+@media (max-width: 360px) {
+
+    /* Button adjustments */
+    .button_index {
+        width: 95%;
+        padding: 0.7em 1em;
+        font-size: 12px;
     }
 
-    .card-presentacion {
-        background: #ffffffdd;
-        backdrop-filter: none;
-        padding: 1.5rem 1rem;
-        width: 100%;
-        max-width: 95%;
-        margin: 0 auto 1rem auto;
-        box-sizing: border-box;
-    }
-}
-
-@media (max-width: 600px) {
-    .copy-button {
-        width: 90%;
-        max-width: none;
-        padding: 10px;
+    /* Skills section adjustments */
+    .iconos-habilidades {
+        gap: 10px;
     }
 
-    .copy-input {
-        width: 110%;
+    .habilidad-item {
+        width: 60px;
+    }
+
+    .icono-habilidad {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nombre-tecnologia {
+        font-size: 11px;
+    }
+
+    /* Footer adjustments */
+    footer {
         font-size: 13px;
     }
 }
