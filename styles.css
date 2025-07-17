@@ -664,3 +664,15 @@ footer a:focus {
         font-size: 14px;
     }
 }
+
+@media (max-width: 600px) {
+    .card {
+        background: #ffffffdd;
+        /* blanco con un poco de transparencia */
+        backdrop-filter: none;
+        /* para evitar problemas en móviles */
+        padding: 1.5rem 1rem;
+        max-width: 95%;
+        margin: 0 auto 1rem auto;
+    }
+}
