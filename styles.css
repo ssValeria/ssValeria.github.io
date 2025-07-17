@@ -602,18 +602,27 @@ footer a:focus {
 /**********************************************/
 /*               RESPONSIVE DESIGN            */
 /**********************************************/
+
+/* Tablets y pantallas medianas */
 @media (max-width: 768px) {
     .card-presentacion {
         padding: 1.5rem;
         font-size: 16px;
     }
 
-    .card-skills {
+    /* Cambio a .card-habilidades que sí existe */
+    .card-habilidades {
         width: 100%;
         max-width: 400px;
     }
+
+    /* Ajuste botones en contenedor */
+    .button-container {
+        gap: 0.5rem;
+    }
 }
 
+/* Móviles pequeños */
 @media (max-width: 600px) {
     .button-container {
         flex-direction: column;
@@ -635,5 +644,23 @@ footer a:focus {
 
     .portada main section {
         font-size: 16px;
+    }
+}
+
+/* Móviles muy pequeños (opcional, para mejorar aún más) */
+@media (max-width: 400px) {
+    .button_index {
+        padding: 0.8em 2em;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .portada .header {
+        font-size: 20px;
+        padding: 0.5rem 0;
+    }
+
+    .portada main section {
+        font-size: 14px;
     }
 }
