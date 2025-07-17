@@ -652,7 +652,7 @@ footer a:focus {
     }
 }
 
-/* Móviles muy pequeños (opcional, para mejorar aún más) */
+/* Móviles muy pequeños*/
 @media (max-width: 400px) {
     .button_index {
         padding: 0.8em 2em;
@@ -673,9 +673,15 @@ footer a:focus {
 @media (max-width: 600px) {
     .card {
         background: #ffffffdd;
-        /* blanco con un poco de transparencia */
         backdrop-filter: none;
-        /* para evitar problemas en móviles */
+        padding: 1.5rem 1rem;
+        max-width: 95%;
+        margin: 0 auto 1rem auto;
+    }
+
+    .card-presentacion {
+        background: #ffffffdd;
+        backdrop-filter: none;
         padding: 1.5rem 1rem;
         max-width: 95%;
         margin: 0 auto 1rem auto;
