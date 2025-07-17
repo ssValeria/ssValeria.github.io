@@ -701,7 +701,7 @@ footer a:focus {
     }
 
     .copy-input {
-        max-width: 100%;
+        max-width: 110%;
         font-size: 13px;
     }
 }
