@@ -1,24 +1,19 @@
 /**********************************************/
-/*               VARIABLES GLOBALES           */
+/*            VARIABLES GLOBALES              */
 /**********************************************/
 :root {
     --color-primary: #066997;
     --color-primary-hover: #319bff;
     --color-bg-footer: #171717;
-    --color-text-footer: #ffffff;
+    --color-text-footer: #fff;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-/**********************************************/
-/*             RESETEO Y BODY GLOBAL          */
-/**********************************************/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
 
 html {
     background: url(fondo.png) no-repeat center center fixed;
@@ -34,7 +29,7 @@ body {
 }
 
 /**********************************************/
-/*                  HEADER                   */
+/*                  HEADER                    */
 /**********************************************/
 .header {
     font-size: clamp(24px, 3vw, 30px);
@@ -43,12 +38,9 @@ body {
     padding: 1rem;
 }
 
-
 /**********************************************/
 /*                 PORTADA PAGE               */
 /**********************************************/
-
-/* === Acceso rápido === */
 .portada .quick-access {
     text-align: center;
     padding: 2rem 0;
@@ -58,7 +50,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* === Contenedor de botones === */
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +58,6 @@ body {
     padding: 0 1rem 1rem 1rem;
 }
 
-/* === Botones de índice === */
 .button_index {
     position: relative;
     display: inline-block;
@@ -85,9 +75,8 @@ body {
     text-decoration: none;
     outline: 2px solid var(--color-primary);
     overflow: hidden;
-    transition: color 0.4s ease, transform 0.4s ease, outline 0.4s ease, box-shadow 0.4s ease;
+    transition: color 0.4s, transform 0.4s, outline 0.4s, box-shadow 0.4s;
 }
-
 .button_index::before {
     content: "";
     position: absolute;
@@ -98,28 +87,22 @@ body {
     background-color: #5badfa;
     transform: skewX(45deg);
     z-index: -1;
-    transition: width 600ms ease;
+    transition: width 600ms;
 }
-
 .button_index:hover {
-    color: #ffffff;
+    color: #fff;
     transform: scale(1.1);
     outline: 2px solid var(--color-primary-hover);
     box-shadow: 4px 5px 17px -4px var(--color-primary);
 }
-
 .button_index:hover::before {
     width: 250%;
 }
-
-/* Mejora de accesibilidad al usar teclado */
 .button_index:focus-visible {
     outline: 2px solid var(--color-primary-hover);
     outline-offset: 4px;
 }
 
-
-/* === Sección principal (texto) === */
 .portada main section {
     max-width: 800px;
     margin: 0 auto 2rem;
@@ -130,22 +113,17 @@ body {
     text-align: justify;
     hyphens: auto;
 }
-
 .portada main section h2 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
 .portada main section p {
     margin-bottom: 1rem;
 }
 
-
 /**********************************************/
-/*               SOBRE MÍ PAGE                */
+/*                SOBRE MÍ PAGE               */
 /**********************************************/
-
-/* === Contenedor general === */
 .sobre-mi-container {
     display: flex;
     flex-direction: column;
@@ -153,103 +131,74 @@ body {
     gap: 2rem;
     padding: 2rem;
 }
-
-/* === Tarjeta de presentación personal === */
-.card-presentacion {
-    background-color: #ffffffcc;
-    max-width: 700px;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    color: #040c3a;
-    font-size: 18px;
-    text-align: justify;
-}
-
-.card-presentacion h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 24px;
-    color: var(--color-primary);
-}
-
-.card-presentacion p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
+.card-presentacion,
 .card-habilidades {
     background-color: #ffffffcc;
     max-width: 700px;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     backdrop-filter: blur(5px);
     color: #040c3a;
     font-size: 18px;
     text-align: justify;
 }
-
+.card-presentacion h2,
 .card-habilidades h2 {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 24px;
     color: var(--color-primary);
 }
+.card-presentacion p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
 
-/* === Foto de perfil circular === */
 .foto-perfil {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-
 .foto-perfil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-/* === Tarjeta de perfil básica === */
 .card-perfil {
     width: 190px;
     height: 254px;
     background: #3405a3;
     border-radius: 15px;
-    box-shadow: 1px 5px 60px 0px #100a886b;
+    box-shadow: 1px 5px 60px 0 #100a886b;
 }
-
 .card-perfil .card-border-top {
     width: 60%;
     height: 3%;
     background: #6b64f3;
     margin: auto;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0 0 15px 15px;
 }
-
 .card-perfil span {
     font-weight: 600;
-    color: white;
+    color: #fff;
     text-align: center;
     display: block;
     padding-top: 10px;
     font-size: 16px;
 }
-
 .card-perfil .job {
     font-weight: 400;
-    color: white;
+    color: #fff;
     display: block;
     text-align: center;
     padding-top: 3px;
     font-size: 12px;
 }
-
 .card-perfil .img {
     width: 70px;
     height: 80px;
@@ -259,7 +208,7 @@ body {
     margin-top: 25px;
 }
 
-/* ESTILO BOTÓN */
+/* Botón azul */
 .button-blue {
     position: relative;
     display: block;
@@ -268,20 +217,14 @@ body {
     border: none;
     border-radius: 8px;
     background: #6b64f3;
-    color: white;
+    color: #fff;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: color 0.4s ease, transform 0.4s ease, outline 0.4s ease, box-shadow 0.4s ease;
+    transition: color 0.4s, transform 0.4s, outline 0.4s, box-shadow 0.4s;
     overflow: hidden;
 }
-
-.button-blue {
-    background: #6b64f3;
-    color: white;
-}
-
 .button-blue::before {
     content: "";
     position: absolute;
@@ -292,45 +235,38 @@ body {
     background-color: #d0ebff;
     transform: skewX(45deg);
     z-index: -1;
-    transition: width 600ms ease;
+    transition: width 600ms;
 }
-
 .button-blue:hover {
     color: #003049;
     transform: scale(1.05);
     outline: 2px solid var(--color-primary-hover);
     box-shadow: 4px 5px 17px -4px var(--color-primary);
 }
-
 .button-blue:hover::before {
     width: 250%;
 }
-
 .button-blue:focus-visible {
     outline: 2px solid var(--color-primary-hover);
     outline-offset: 4px;
 }
 
-
-
-/* === Estilos para la sección de habilidades === */
+/* Habilidades */
 .card-habilidades {
     background-color: #ffffffcc;
     max-width: 700px;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     color: #040c3a;
     text-align: center;
     margin: 0 auto;
 }
-
 .card-habilidades h2 {
     margin-bottom: 1.5rem;
     font-size: 24px;
     color: var(--color-primary);
 }
-
 .iconos-habilidades {
     display: flex;
     justify-content: center;
@@ -338,27 +274,21 @@ body {
     gap: 30px;
     margin-top: 20px;
 }
-
-/* Contenedor para cada habilidad */
 .habilidad-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100px;
 }
-
 .icono-habilidad {
     width: 70px;
     height: 70px;
     padding: 15px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.3);
+    transition: all 0.3s;
     margin-bottom: 8px;
-
 }
-
-/* Texto del nombre de la tecnología */
 .nombre-tecnologia {
     font-size: 14px;
     font-weight: 500;
@@ -367,57 +297,48 @@ body {
     margin-top: 5px;
 }
 
-/* Efecto hover */
 .icono-habilidad:hover {
     transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255,255,255,0.5);
 }
 
-/* Colores específicos para cada tecnología */
+/* Colores de iconos */
 .icono-habilidad[title="Python"],
 .icono-habilidad[data-tecnologia="Python"] {
     fill: #3776AB;
 }
-
 .icono-habilidad[title="WordPress"],
 .icono-habilidad[data-tecnologia="WordPress"] {
     fill: #21759B;
 }
-
 .icono-habilidad[title="Ubuntu"],
 .icono-habilidad[data-tecnologia="ubuntu"] {
     fill: #E95420;
 }
-
 .icono-habilidad[title="HTML5"],
 .icono-habilidad[data-tecnologia="HTML"] {
     fill: #E34F26;
 }
-
 .icono-habilidad[title="CSS3"],
 .icono-habilidad[data-tecnologia="CSS"] {
     fill: #1572B6;
 }
-
 .icono-habilidad[title="Oracle"],
 .icono-habilidad[data-tecnologia="Oracle"] {
     fill: #F80000;
 }
-
 .icono-habilidad[title="MongoDB"],
 .icono-habilidad[data-tecnologia="MongoDB"] {
     fill: #47A248;
 }
-
 .icono-habilidad[title="Java"],
 .icono-habilidad[data-tecnologia="Java"] {
     fill: #007396;
 }
 
 /**********************************************/
-/*          CONTACTO PAGE                    */
+/*              CONTACTO PAGE                 */
 /**********************************************/
-
 .copy-button {
     text-align: center;
     display: inline-flex;
@@ -431,18 +352,15 @@ body {
     user-select: all;
     width: auto;
 }
-
 .copy-button:focus-within {
     outline: 2px solid #74c0fc;
 }
-
 .copy-icon {
     width: 20px;
     height: 20px;
     fill: #003049;
     pointer-events: none;
 }
-
 .copy-input {
     text-align: center;
     border: none;
@@ -460,43 +378,34 @@ body {
 }
 
 /**********************************************/
-/*               PROYECTOS PAGE              */
+/*            PROYECTOS PAGE                  */
 /**********************************************/
-
-/* ——— Contenedor principal de la página de proyectos ——— */
 body.proyectos main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
-    /* separación vertical entre cards */
     padding: 2rem 1rem;
 }
-
-/* ——— Tarjeta de proyecto ——— */
 .card {
     width: 100%;
     max-width: 720px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255,255,255,0.8);
     backdrop-filter: blur(4px);
     border-radius: 16px;
     padding: 2rem 1.5rem;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     color: #040c3a;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-/* Título opcional dentro de cada card */
 .card h2 {
-    font-size: clamp(22px, 4vw, 28px);
+    font-size: clamp(22px,4vw,28px);
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 0.5rem;
 }
-
-/* Descripción opcional */
 .card p {
     font-size: 16px;
     line-height: 1.5;
@@ -504,8 +413,6 @@ body.proyectos main {
     margin-bottom: 1.5rem;
     padding: 0 0.5rem;
 }
-
-/* ——— Contenedor de botones dentro de cada card ——— */
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -513,7 +420,6 @@ body.proyectos main {
     gap: 1rem;
     width: 100%;
 }
-
 
 /* Botón GitHub */
 .Btn {
@@ -525,50 +431,42 @@ body.proyectos main {
     padding: 12px 20px;
     margin-top: 10px;
     background: #24292e;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
     overflow: hidden;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s, transform 0.3s;
 }
-
 .Btn:hover {
     background: #8bbdf7;
     transform: translateY(-2px);
 }
-
 .Btn .svgContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .Btn svg {
     width: 1.4em;
     height: 1.4em;
 }
-
-/* Fondo animado opcional */
 .Btn .BG {
     position: absolute;
     inset: 0;
     background: #8bbdf7;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
     z-index: -1;
 }
-
 .Btn:hover .BG {
     opacity: 1;
 }
 
-
-
 /**********************************************/
-/*                  FOOTER                    */
+/*                FOOTER                      */
 /**********************************************/
 footer {
     text-align: center;
@@ -576,25 +474,22 @@ footer {
     background-color: var(--color-bg-footer);
     color: var(--color-text-footer);
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: clamp(16px, 2vw, 22px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-size: clamp(16px,2vw,22px);
     margin-top: auto;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
-
 footer p {
     margin: 8px 0;
     font-weight: bold;
 }
-
 footer a {
     color: var(--color-text-footer);
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
     cursor: pointer;
 }
-
 footer a:hover,
 footer a:focus {
     color: var(--color-primary);
@@ -602,99 +497,48 @@ footer a:focus {
 }
 
 /**********************************************/
-/*               RESPONSIVE DESIGN            */
+/*           RESPONSIVE DESIGN                */
 /**********************************************/
-
-/* ========== General Responsive Rules ========== */
 @media (max-width: 1200px) {
-
-    /* Adjustments for large tablets and small laptops */
-    .portada main section {
-        max-width: 90%;
-    }
-
-    .card-presentacion,
-    .card-habilidades {
-        max-width: 85%;
-    }
+    .portada main section { max-width: 90%; }
+    .card-presentacion, .card-habilidades { max-width: 85%; }
 }
-
-/* ========== Tablets and Medium Screens (768px - 1024px) ========== */
 @media (max-width: 1024px) {
-
-    /* General content adjustments */
     .portada main section,
     .card-presentacion,
     .card-habilidades {
         font-size: 17px;
         line-height: 1.5;
     }
-
-    /* Button container adjustments */
     .button-container {
         gap: 0.8rem;
         padding: 0 0.8rem 0.8rem;
     }
-
-    /* Project cards adjustments */
     .card {
         padding: 1.8rem 1.2rem;
     }
 }
-
 @media (max-width: 768px) {
-
-    /* Card adjustments */
     .card-presentacion,
     .card-habilidades {
         padding: 1.5rem;
         font-size: 16px;
         max-width: 90%;
     }
-
-    /* Skills icons adjustments */
-    .iconos-habilidades {
-        gap: 20px;
-    }
-
-    .habilidad-item {
-        width: 80px;
-    }
-
-    .icono-habilidad {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* Profile card adjustments */
-    .card-perfil {
-        width: 160px;
-        height: 220px;
-    }
-
-    .card-perfil .img {
-        width: 60px;
-        height: 70px;
-    }
+    .iconos-habilidades { gap: 20px; }
+    .habilidad-item { width: 80px; }
+    .icono-habilidad { width: 60px; height: 60px; }
+    .card-perfil { width: 160px; height: 220px; }
+    .card-perfil .img { width: 60px; height: 70px; }
 }
-
-/* ========== Small Tablets and Large Phones (600px - 768px) ========== */
 @media (max-width: 700px) {
-
-    /* Header adjustments */
-    .header {
-        font-size: clamp(20px, 4vw, 24px);
-    }
-
-    /* Button container becomes vertical */
+    .header { font-size: clamp(20px,4vw,24px); }
     .button-container {
         flex-direction: column;
         align-items: center;
         gap: 0.7rem;
         padding-bottom: 1rem;
     }
-
-    /* Index buttons adjustments */
     .button_index {
         width: 90%;
         max-width: 300px;
@@ -703,65 +547,34 @@ footer a:focus {
         letter-spacing: 3px;
         font-size: 14px;
     }
-
-    /* Project cards adjustments */
     .card {
         padding: 1.5rem 1rem;
         max-width: 95%;
     }
-
-    /* Contact form adjustments */
     .copy-button {
         width: 90%;
         max-width: none;
         padding: 10px;
     }
-
     .copy-input {
         max-width: 110%;
         font-size: 13px;
     }
 }
-
-/* ========== Mobile Phones (480px - 600px) ========== */
 @media (max-width: 600px) {
-
-    /* General content adjustments */
     .portada .header {
         font-size: 22px;
         padding: 0.8rem 0;
     }
-
-    .portada main section {
-        font-size: 15px;
-    }
-
-    /* Profile section adjustments */
+    .portada main section { font-size: 15px; }
     .sobre-mi-container {
         padding: 1.5rem 1rem;
         gap: 1.5rem;
     }
-
-    /* Skills section adjustments */
-    .iconos-habilidades {
-        gap: 15px;
-    }
-
-    .habilidad-item {
-        width: 70px;
-    }
-
-    .icono-habilidad {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-    }
-
-    .nombre-tecnologia {
-        font-size: 12px;
-    }
-
-    /* Remove blur effects for performance */
+    .iconos-habilidades { gap: 15px; }
+    .habilidad-item { width: 70px; }
+    .icono-habilidad { width: 50px; height: 50px; padding: 10px; }
+    .nombre-tecnologia { font-size: 12px; }
     .card,
     .card-presentacion,
     .card-habilidades {
@@ -769,84 +582,35 @@ footer a:focus {
         backdrop-filter: none;
     }
 }
-
-/* ========== Small Phones (under 480px) ========== */
 @media (max-width: 480px) {
-
-    /* Header and text adjustments */
     .portada .header {
         font-size: 20px;
         padding: 0.5rem 0;
     }
-
-    .portada main section {
-        font-size: 14px;
-    }
-
-    /* Button adjustments */
+    .portada main section { font-size: 14px; }
     .button_index {
         padding: 0.8em 2em;
         font-size: 13px;
         letter-spacing: 2px;
     }
-
-    /* Profile card adjustments */
-    .card-perfil {
-        width: 140px;
-        height: 200px;
-    }
-
-    .card-perfil span {
-        font-size: 14px;
-    }
-
-    .card-perfil .job {
-        font-size: 10px;
-    }
-
-    .card-perfil .img {
-        width: 50px;
-        height: 60px;
-        margin-top: 20px;
-    }
-
-    /* Footer adjustments */
+    .card-perfil { width: 140px; height: 200px; }
+    .card-perfil span { font-size: 14px; }
+    .card-perfil .job { font-size: 10px; }
+    .card-perfil .img { width: 50px; height: 60px; margin-top: 20px; }
     footer {
         padding: 12px;
         font-size: 14px;
     }
 }
-
-/* ========== Very Small Phones (under 360px) ========== */
 @media (max-width: 360px) {
-
-    /* Button adjustments */
     .button_index {
         width: 95%;
         padding: 0.7em 1em;
         font-size: 12px;
     }
-
-    /* Skills section adjustments */
-    .iconos-habilidades {
-        gap: 10px;
-    }
-
-    .habilidad-item {
-        width: 60px;
-    }
-
-    .icono-habilidad {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nombre-tecnologia {
-        font-size: 11px;
-    }
-
-    /* Footer adjustments */
-    footer {
-        font-size: 13px;
-    }
+    .iconos-habilidades { gap: 10px; }
+    .habilidad-item { width: 60px; }
+    .icono-habilidad { width: 40px; height: 40px; }
+    .nombre-tecnologia { font-size: 11px; }
+    footer { font-size: 13px; }
 }
